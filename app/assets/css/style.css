@@ -784,9 +784,11 @@ button {
 .tour-constructor .custom-radio-btn {
   display: inline-block;
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border: 2px solid #1B1F2B;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 50%;
   vertical-align: middle;
   margin-right: 11px;
@@ -821,9 +823,11 @@ button {
 .tour-constructor .custom-check-btn {
   display: inline-block;
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border: 2px solid #1B1F2B;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 5px;
   vertical-align: middle;
   margin-right: 19px;
@@ -833,8 +837,8 @@ button {
   display: inline-block;
   width: 12px;
   position: absolute;
-  left: 7px;
-  bottom: 0;
+  left: 6px;
+  bottom: -1px;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transition: 0.1s ease-in;
@@ -1003,8 +1007,8 @@ button {
   }
   .tour-constructor .custom-check-btn::before {
     width: 9px;
-    left: 4px;
-    bottom: 0;
+    left: 2px;
+    bottom: -1px;
   }
   .tour-constructor input[type=checkbox] {
     margin-bottom: 30px;

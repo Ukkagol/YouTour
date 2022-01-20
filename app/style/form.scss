@@ -78,9 +78,10 @@ textarea{
 .custom-radio-btn{
    display: inline-block;
    position: relative;
-   width: 34px;
-   height: 34px;
+   width: 26px;
+   height: 26px;
    border: 2px solid $black;
+   box-sizing: border-box;
    border-radius: 50%;
    vertical-align: middle;
    margin-right: 11px;
@@ -117,9 +118,10 @@ textarea{
    .custom-check-btn{
       display: inline-block;
       position: relative;
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       border: 2px solid $black;
+      box-sizing: border-box;
       border-radius: 5px;
       vertical-align: middle;
       margin-right: 19px;
@@ -128,11 +130,9 @@ textarea{
          content: url(../img/check.svg);
          display: inline-block;
          width: 12px;
-         
-         
          position: absolute;
-         left: 7px;
-         bottom: 0;
+         left: 6px;
+         bottom: -1px;
          transform: scale(0);
          transition: 0.1s ease-in;
    }
@@ -273,8 +273,8 @@ textarea{
       
          &::before{
             width: 9px;
-            left: 4px;
-            bottom: 0;
+            left: 2px;
+            bottom: -1px;
       }
       }
 
