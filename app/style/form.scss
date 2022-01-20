@@ -1,0 +1,296 @@
+
+.tour-constructor{
+   width: 100%;
+   padding: 70px;
+   background-color: white;
+   border-radius: 50px;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   label, p{
+      @include p-normal;
+      margin-bottom: 8px;
+      width: 100%;
+      flex: 1;
+      margin-right: 30px;
+      &:last-child{
+         margin-right: 0;
+      }
+   }
+   input[type='text'], input[type='textarea'], input[type='tel'], input[type='email'], select {
+      width: 100%;
+      height: 68px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      background-color: $beige100;
+      border: 1px $beige200 solid;
+      padding: 20px;
+      appearance: none;
+
+      &::placeholder {
+      @include p-normal;
+      color: $gray300;
+   }
+      &:hover{
+         background-color: $beige200;
+         cursor: pointer;
+      }
+   }
+
+
+   .select{
+      position: relative;
+
+   &::after {
+      content: url(/app/assets/img/dropdown.svg);
+      pointer-events: none;
+      position: absolute;
+      top: 21px;
+      right: 23px;
+      z-index: 1;
+  }
+}
+
+select{
+   @include p-normal;
+   color: $gray300;
+
+}
+select > option{
+   color: $black;
+}
+
+textarea{
+   width: 100%;
+   height: 152px;
+   resize: none;
+   box-sizing: border-box;
+   border-radius: 10px;
+   background-color: $beige100;
+   border: 1px $beige200 solid;
+   padding: 20px;
+   &:hover{
+      background-color: $beige200;
+      cursor: pointer;
+   }
+}
+// создание кастомной радио-кнопки
+.custom-radio-btn{
+   display: inline-block;
+   position: relative;
+   width: 26px;
+   height: 26px;
+   border: 2px solid $black;
+   border-radius: 50%;
+   vertical-align: middle;
+   margin-right: 11px;
+
+   &::before{
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: $black;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: 0.2s ease-in;
+}
+}
+
+.origin-btn:checked + .custom-radio-btn::before {
+   transform: translate(-50%, -50%) scale(1);
+} 
+
+.origin-btn {
+   /* Скрываем реальную радио кнопку*/
+       width: 0;
+       height: 0;
+       position: absolute;
+       opacity: 0;
+       z-index: -1;
+   }
+
+   // создание кастомного чекбокса
+   .custom-check-btn{
+      display: inline-block;
+      position: relative;
+      width: 26px;
+      height: 26px;
+      border: 2px solid $black;
+      border-radius: 5px;
+      vertical-align: middle;
+      margin-right: 19px;
+   
+      &::before{
+         content: url(/app/assets/img/check.svg);
+         display: inline-block;
+         width: 12px;
+         
+         
+         position: absolute;
+         left: 7px;
+         bottom: 0;
+         transform: scale(0);
+         transition: 0.1s ease-in;
+   }
+   }
+   
+   .origin-check:checked + .custom-check-btn::before {
+      transform: scale(1);
+   } 
+   
+   .origin-check {
+      /* Скрываем реальный чекбокс*/
+          width: 0;
+          height: 0;
+          position: absolute;
+          opacity: 0;
+          z-index: -1;
+      }
+
+}
+
+.tour-constructor__group{
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 33px;
+}
+.age-radio-btn, .license-check-btn{
+   margin-bottom: 33px;
+}
+
+.form-btn button:first-child{
+   margin-right: 30px;
+}
+
+// для экранов <= 1024px
+@media screen and (max-width: 1024px) {
+
+   .tour-constructor{
+      padding: 60px;
+     
+      label, p{
+         margin-right: 20px;
+         &:last-child{
+            margin-right: 0;
+         }
+      }
+      }
+   
+   
+}
+
+// для экранов <= 360px
+@media screen and(max-width: 460px) {
+
+   .tour-constructor{
+      padding: 20px 20px 40px 20px;
+      border-radius: 30px;
+
+      .tour-constructor__group{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        margin-bottom: 30px;
+        &>label:first-child{
+           margin-bottom: 30px;
+        }
+      }
+
+      label, p{
+         @include m-p-normal;
+         width: 100%;
+         min-width: 278px;
+         margin-right: 0;
+      }
+
+      input[type='text'], input[type='textarea'], input[type='tel'], input[type='email'], select {
+         width: 100%;
+         height: 43px;
+         box-sizing: border-box;
+         padding: 10px;
+   
+         &::placeholder {
+         @include m-p-normal;
+         color: $gray300;
+      }
+         &:hover{
+            background-color: $beige200;
+            cursor: pointer;
+         }
+
+      }
+   
+      .select{
+         select{
+         height: 46px !important;}
+      &::after {
+         top: 14px;
+         right: 13px;
+     }
+   }
+   
+   select{
+      @include m-p-normal;
+      color: $gray300;
+   
+   }
+   select > option{
+      color: $black;
+   }
+   
+   textarea{
+      width: 100%;
+      height: 132px;
+      margin-bottom: -30px !important;
+   }
+
+   // создание кастомной радио-кнопки
+   .custom-radio-btn{
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+   
+      &::before{
+         width: 9.2px;
+         height: 9.2px;
+   }
+   }
+   .age-radio-btn > label:first-child{
+      margin-right: 30px;
+   }
+      
+      // создание кастомного чекбокса
+      .custom-check-btn{
+         width: 20px;
+         height: 20px;
+         margin-right: 10px;
+
+      
+         &::before{
+            width: 9px;
+            left: 4px;
+            bottom: 0;
+      }
+      }
+
+    input[type='checkbox']{
+         margin-bottom: 30px;
+         float:left;
+      }
+         
+   }
+   
+   .age-radio-btn, .license-check-btn{
+      margin-bottom: 30px;
+   }
+   
+   .form-btn button:first-child{
+      margin-right: 6px;
+   }
+
+}

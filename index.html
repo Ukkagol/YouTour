@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="RU-ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Сайт для тех, кто ищет своё идеальное путешествие">
+  <meta name="Keywords" content="tour, тур, путешествие, туризм, туристическое агентство, турфирма, отпуск">
+  <title>YourTour</title>
+  <link rel="stylesheet" href="/app/assets/css/style.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <img src="app/assets/img/YourTour.svg" alt="logo" width=182>
+        </div>
+
+        <ul>
+          <li>Туры</li>
+          <li>Создать тур</li>
+          <li>Отзывы</li>
+          <li>Истории</li>
+        </ul>
+
+        <div class="phone">
+          +7 999 999 99 99
+        </div>
+      </nav>
+      <h1 class="slogan">
+        Идеальные путешествия существуют
+      </h1>
+      <p>Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
+      <a href="#" class='small-bt'>Найти тур</a>
+    </div>
+  </div>
+
+  <main>
+  <section class='choose-tour'>
+      <div class="container">
+        <div class="section__head">
+          <h2>Выбери свой тур</h2>
+          <ul class="tab">
+            <li class='current'>Популярные</li>
+            <li>Авторские</li>
+            <li>Походы</li>
+            <li>Сплавы</li>
+            <li>Велопрогулки</li>
+          </ul>
+        </div>
+        <div class="section__content flex-row">
+          <div class="tour-card" style="background-image: url(/app/assets/img/image_32.png);">
+            <div class="text-container">
+              <h3>Путешествие <br> в горы</h3>
+              <p class='price'>от 80 000 руб</p>
+            </div>
+            <a class='text-bt'>Подробнее</a>
+          </div>
+          <div class="tour-card" style="background-image: url(/app/assets/img/image_31.png);">
+            <div class="text-container">
+              <h3>Путешествие <br> в горы</h3>
+              <p class='price'>от 80 000 руб</p>
+            </div>
+            <a class='text-bt'>Подробнее</a>
+          </div>
+          <div class="tour-card" style="background-image: url(/app/assets/img/image_39.png);">
+            <div class="text-container">
+              <h3>Путешествие <br> в горы</h3>
+              <p class='price'>от 80 000 руб</p>
+            </div>
+            <a class='text-bt'>Подробнее</a>
+          </div>
+          <div class="tour-card" style="background-image: url(/app/assets/img/image_35.png);">
+            <div class="text-container">
+              <h3>Путешествие <br> в горы</h3>
+              <p class='price'>от 80 000 руб</p>
+            </div>
+            <a class='text-bt'>Подробнее</a>
+          </div>
+          <div class="tour-card" style="background-image: url(/app/assets/img/image_33.png);">
+            <div class="text-container">
+              <h3>Путешествие <br> в горы</h3>
+              <p class='price'>от 80 000 руб</p>
+            </div>
+            <a class='text-bt'>Подробнее</a>
+          </div>
+          <div class="tour-card" style="background-image: url(/app/assets/img/image_30.png);">
+            <div class="text-container">
+              <h3>Путешествие <br> в горы</h3>
+              <p class='price'>от 80 000 руб</p>
+            </div>
+            <a class='text-bt'>Подробнее</a>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class='make-tour'>
+      <div class="container">
+        <div class="section__head">
+          <h2>Собери свой тур</h2>
+          <p>
+            Идейные соображения высшего порядка,<br>а также рамки и место обучения кадров
+          </p>
+        </div>
+        <in action="" method="get" class='tour-constructor'>
+          <div class="tour-constructor__group">
+            <label>Имя<br>
+              <input type="text" name='name' id="name" placeholder='Введите ваше имя'>
+            </label>
+
+            <label>Направление<br>
+              <div class='select'><select name='direction' id="direction">
+                  <option value="" style="display:none;">Куда хотите ехать</option>
+                  <option value="norway">Норвегия</option>
+                </select></div>
+            </label>
+          </div>
+          <div class="tour-constructor__group">
+            <label>Email<br>
+              <input type="email" name='email' id="email" placeholder='example@mail.com'>
+            </label>
+
+            <label>Телефон<br>
+              <input type="tel" name='tel' id="tel" placeholder='+7(___)___-__-__' style="letter-spacing:0.15em;">
+            </label>
+          </div>
+          <div class="tour-constructor__group">
+            <label>Дата от<br>
+              <input type="text" name='from' id="from" placeholder='ДД.ММ.ГГГГ' style="letter-spacing:0.05em;">
+            </label>
+
+            <label>Дата до<br>
+              <input type="text" name='to' id="to" placeholder='ДД.ММ.ГГГГ' style="letter-spacing:0.05em;">
+            </label>
+          </div>
+          <div class="tour-constructor__group">
+            <label>Комментарий<br>
+              <textarea name='name' id="name"></textarea>
+            </label>
+          </div>
+          <p>Вам есть 18 лет?</p>
+          <div class="age-radio-btn">
+            <label><input name="age" type="radio" value="old" class='origin-btn'>
+              <span class="custom-radio-btn"></span>Да</label>
+            <label><input name="age" type="radio" value="yang" class='origin-btn'>
+              <span class="custom-radio-btn"></span>Нет</label>
+          </div>
+          <div class="license-check-btn">
+            <label><input name="license" type="checkbox" value="agree" class='origin-check'>
+              <span class="custom-check-btn"></span><span class='note'>Нажимая кнопку, я принимаю условия
+                <a>Лицензионного договора</a></span></label>
+          </div>
+          <div class="form-btn">
+            <button type="submit" class="big-bt_dark">Найти тур</button>
+            <button type="reset" class="big-bt_light">Сбросить</button>
+          </div>
+          </form>
+      </div>
+    </section>
+
+    <section class='feedback'>
+      <div class="container">
+        <div class="section__head">
+          <h2>Отзывы наших<br>путешественников</h2>
+          <p>
+            Идейные соображения высшего порядка,<br>а также рамки и место обучения кадров
+          </p>
+        </div>
+        <div class="section__content flex-row">
+          <div class="feedback-card">
+            <p>Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу
+              (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также
+              начало повседневной работы по формированию позиции позволяет оценить значение модели развития.</p>
+            <div class="author">
+              <h3 class="author__name">Мария</h3>
+              <p class="note">Тур: Вдали от дома </p>
+              <img src="/app/assets/img/review photo-1.png" alt="аватар" class="avatar">
+            </div>
+          </div>
+          <div class="feedback-card">
+            <p>Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании
+              системы обучения кадров, соответствует насущным потребностям.
+              <br><br>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности
+              обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика
+              показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание
+              модели развития.
+            </p>
+            <div class="author">
+              <h3 class="author__name">Павел</h3>
+              <p class="note">Тур: Вдали от дома </p>
+              <img src="/app/assets/img/review photo-2.png" alt="аватар" class="avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class='gallery'>
+      <div class="container">
+        <div class="section__head">
+          <h2>Фотографии путешествий</h2>
+          <p>
+            Идейные соображения высшего порядка,<br>а также рамки и место обучения кадров
+          </p>
+        </div>
+        <div class="section__content flex-column">
+          <div class="gallery__content">
+
+            <div class="gallery__card" style="background-image: url(/app/assets/img/travel_photo-1.png);"></div>
+            <div class="gallery__card" style="background-image: url(/app/assets/img/travel_photo-2.png);"></div>
+            <div class="gallery__card" style="background-image: url(/app/assets/img/travel_photo-3.png);"></div>
+            <div class="gallery__card" style="background-image: url(/app/assets/img/travel_photo-4.png);"></div>
+            <div class="gallery__card" style="background-image: url(/app/assets/img/travel_photo-5.png);"></div>
+            <div class="gallery__card" style="background-image: url(/app/assets/img/travel_photo-6.png);"></div>
+            <div class="gallery__card" style="background-image: url(/app/assets/img/travel_photo-7.png);"></div>
+            <div class="gallery__card" style="background-image: url(/app/assets/img/travel_photo-8.png);"></div>
+            <div class="gallery__card" style="background-image: url(/app/assets/img/travel_photo-9.png);"></div>
+            <div class="gallery__card" style="background-image: url(/app/assets/img/travel_photo-10.png);"></div>
+            <div class="gallery__card" style="background-image: url(/app/assets/img/travel_photo-11.png);"></div>
+            <div class="gallery__card" style="background-image: url(/app/assets/img/travel_photo-12.png);"></div>
+            <div class="gallery__card" style="background-image: url(/app/assets/img/travel_photo-13.png);"></div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class='stories'>
+      <div class="container">
+        <div class="section__head">
+          <h2>Истории путешествий</h2>
+          <p>
+            Идейные соображения высшего порядка,<br>а также рамки и место обучения кадров
+          </p>
+        </div>
+        <div class="section__content flex-column">
+          <div class="story-card" style="background-image: url(/app/assets/img/story_1.png);">
+            <div class="text-container">
+              <h3>Автостопом в Стамбул</h3>
+              <p>Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу
+                (специалистов) участие в формировании новых предложений:</p>
+              <br>
+              <ul>
+                <li>вкусная еда</li>
+                <li>дешевый транспорт</li>
+                <li>красивый город.</li>
+              </ul>
+            </div>
+            <div class="story-card__footer">
+              <a class='text-bt'>Подробнее</a>
+              <div class="socials">
+                <a href="#" class="socials-bt">instagram</a>
+                <a href="#" class="socials-bt">facebook</a>
+                <a href="#" class="socials-bt">YouTube</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="story-card" style="background-image: url(/app/assets/img/story_2.png);">
+            <div class="text-container">
+              <h3>Автостопом в Стамбул</h3>
+              <p>Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу
+                (специалистов) участие в формировании новых предложений:</p>
+            </div>
+            <div class="story-card__footer">
+              <a class='text-bt'>Подробнее</a>
+              <div class="socials">
+                <a href="#" class="socials-bt">instagram</a>
+                <a href="#" class="socials-bt">ВКонтакте</a>
+              </div>
+            </div>
+          </div>
+          <div class="story-card" style="background-image: url(/app/assets/img/story_3.png);">
+            <div class="text-container">
+              <h3>Автостопом в Стамбул</h3>
+              <p>Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу
+                (специалистов) участие в формировании новых предложений:</p>
+            </div>
+            <div class="story-card__footer">
+              <a class='text-bt'>Подробнее</a>
+              <div class="socials">
+                <a href="#" class="socials-bt">instagram</a>
+                <a href="#" class="socials-bt">facebook</a>
+                <a href="#" class="socials-bt">ВКонтакте</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class='sta'>
+      <div class="container">
+        <div class="section__content flex-row">
+          <img class="sta__img" src="/app/assets/img/footer photo.png">
+          <div class="sta-txt">
+            <h3>Пора в путешествие вместе с нами!</h3>
+            <p class="note">Напиши на почту и узнай подробности <br> на <a>yourtour@gmail.com<a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="section__content flex-row">
+            <p>Наши социальные сети</p>
+            <div class="footer__socials">
+              <a href="#" class="socials-bt"><img src="/app/assets/img/inst.svg" alt="">instagram</a>
+              <a href="#" class="socials-bt"><img src="/app/assets/img/fb.svg" alt="">facebook</a>
+              <a href="#" class="socials-bt"><img src="/app/assets/img/vk.svg" alt="">vkontakte</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+  </main> 
+
+
+  <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+  <script src="/app/assets/js/jquery.maskedinput.min.js"></script>
+  <script src="/app/assets/js/script.js"></script>
+</body>
+
+</html>

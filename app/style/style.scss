@@ -1,0 +1,1065 @@
+@import "reset.scss";
+@import "colors.scss";
+@import "text-styles.scss";
+@import "buttons.scss";
+@import "form.scss";
+
+body {
+   font-family: 'Roboto', sans-serif;
+   background-color: $beige100;
+}
+
+// область шириной 1200 пикселей
+.container {
+   position: relative;
+   width: 1200px;
+   padding-left: 15px;
+   padding-right: 15px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+// хедер
+.header {
+   display: flex;
+   justify-content: center;
+   height: 831px;
+   width: 100%;
+   background: $green400 url('/app/assets/img/header-img.jpg') no-repeat left top;
+   background-size: cover;
+
+   p {
+      @include p-normal;
+      color: white;
+      width: 562px;
+      text-align: center;
+      margin: 50px 0;
+   }
+}
+
+nav {
+   width: 100%;
+   height: 88px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   @include p-normal;
+   color: white;
+
+   li {
+      display: inline-block;
+      margin-right: 50px;
+      border-bottom: 1px solid transparent;
+
+      &:last-child {
+         margin-right: 0;
+      }
+
+      &:hover {
+         border-color: white;
+         cursor: pointer;
+      }
+   }
+}
+
+.slogan {
+   color: white;
+   width: 768px;
+   margin-top: 119px;
+}
+
+// выбор тура
+.choose-tour {
+   width: 100%;
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+
+.section__head {
+   margin-top: 135px;
+   margin-bottom: 100px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   h2 {
+      margin-bottom: 35px;
+   }
+
+   p {
+      @include p-normal;
+      color: $gray300;
+      text-align: center;
+   }
+}
+
+.tab {
+
+   li {
+      display: inline-block;
+      @include p-big;
+      margin-right: 30px;
+      border-bottom: 2px solid transparent;
+
+      &:last-child {
+         margin-right: 0;
+      }
+
+      &:hover {
+         border-color: $black;
+         cursor: pointer;
+      }
+   }
+
+   li.current {
+      color: $orange200;
+      border-color: $orange200 !important;
+      cursor: default !important;
+   }
+}
+
+.tour-card {
+   position: relative;
+   width: 370px - 100px;
+   height: 531px - 100px;
+   border-radius: 50px;
+
+   * {
+      z-index: 3;
+   }
+
+   // background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%), url(/app/assets/img/image_32.png);
+   background-repeat: no-repeat;
+   padding: 50px;
+   margin-bottom: 30px;
+   display: inline-flex;
+   flex-direction: column;
+   justify-content: space-between;
+   overflow: hidden;
+
+   &::before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      border-radius: 50px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      // background: url(/app/assets/img/image_32.png) no-repeat;
+      background-color: $gray300;
+      background-image: inherit;
+      background-repeat: no-repeat;
+      transition: all ease 300ms;
+   }
+
+   &::after {
+      content: "";
+      z-index: 2;
+      position: absolute;
+      border-radius: 50px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
+   }
+
+   &:hover {
+      width: 370px - 80px;
+      height: 531px - 90px;
+      padding: 40px 40px 50px;
+      cursor: pointer;
+
+      &::before {
+         transform: scale(1.2);
+      }
+
+      .text-bt {
+         background-color: $green400;
+         margin-left: -10px;
+      }
+   }
+}
+
+.text-container {
+
+   h3 {
+      color: white;
+   }
+
+   p {
+      @include p-normal;
+      color: white;
+      margin-top: 37px;
+   }
+
+   p.price {
+      @include p-small;
+      color: white;
+      margin-top: 16px;
+   }
+
+   ul {
+      @include p-normal;
+      color: white;
+      list-style-type: disc;
+      margin-left: 32px;
+
+   }
+}
+
+.section__content {
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin-bottom: -30px;
+}
+
+.flex-column {
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.flex-row {
+   flex-direction: row;
+}
+
+// собери свой тур
+.make-tour {
+   position: relative;
+   width: 100%;
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+
+// стили формы в файле form.scss
+
+// отзывы
+.feedback {
+   position: relative;
+   width: 100%;
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+
+.feedback-card {
+   flex: 1;
+   display: flex;
+   width: 100%;
+   height: 673px;
+   margin-right: 30px;
+   padding: 40px;
+   background-color: $beige200;
+   border-radius: 50px;
+   flex-direction: column;
+   justify-content: space-between;
+
+   &:last-child {
+      margin-right: 0;
+   }
+
+   p:first-child {
+      @include p-big
+   }
+
+   .avatar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+   }
+
+   .author__name {
+      margin-bottom: 8px;
+   }
+
+   .author {
+      position: relative;
+   }
+}
+
+.gallery {
+   position: relative;
+   width: 100%;
+   position: relative;
+   display: flex;
+   justify-content: center;
+
+   .container {
+      width: 100%;
+      padding: 0;
+   }
+}
+
+.gallery__content {
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: stretch;
+   margin-bottom: -30px;
+   flex-wrap: wrap;
+}
+
+.gallery__card {
+   background-image: inherit;
+   background-size: cover;
+   width: calc(20% - 30px);
+   height: 300px;
+   border-radius: 50px;
+   margin: 0 15px 30px;
+   flex: 1 1 auto;
+
+   // box-shadow: 0 0 2px red;
+   &:nth-child(9n + 1),
+   &:nth-child(9n + 2),
+   &:nth-child(9n + 3),
+   &:nth-child(9n + 4) {
+      width: calc(25% - 30px);
+   }
+
+   img {
+      width: 100%;
+      height: 100%;
+   }
+}
+
+//  истории путешествий
+.stories {
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+
+   .text-container {
+      max-width: 554px;
+   }
+}
+
+.story-card {
+   position: relative;
+   width: calc(100%-30px);
+   height: 567px;
+   border-radius: 50px;
+
+   * {
+      z-index: 3;
+   }
+
+   background-repeat: no-repeat;
+   padding: 60px;
+   box-sizing: border-box;
+   display: inline-flex;
+   flex-direction: column;
+   justify-content: space-between;
+   overflow: hidden;
+   margin-bottom: 50px;
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+
+   &::before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      border-radius: 50px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $gray300;
+      background-image: inherit;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: all ease 300ms;
+   }
+
+   &::after {
+      content: "";
+      z-index: 2;
+      position: absolute;
+      border-radius: 50px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%);
+   }
+
+   &:hover {
+      cursor: pointer;
+
+      &::before {
+         transform: scale(1.2);
+      }
+
+      .text-bt {
+         background-color: $green400;
+         margin-left: -10px;
+      }
+   }
+}
+
+.story-card__footer {
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+}
+
+.socials {
+   align-self: center;
+
+   a {
+      margin-right: 35px;
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+}
+
+// СТА
+.sta {
+   margin: 135px 0;
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+
+   .sta__img {
+      border-radius: 50px;
+      width: 370px;
+      height: 370px;
+   }
+
+   .section__content {
+      justify-content: center;
+   }
+
+   .sta-txt {
+      width: 370px;
+      margin-left: 30px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   .note {
+      @include p-normal;
+      color: $gray300;
+      margin-top: 20px;
+   }
+}
+
+// футер
+
+footer {
+   display: block;
+   width: 100%;
+   background-color: $beige200;
+   height: 88px;
+
+   .section__content {
+      height: 88px;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   p {
+      @include p-normal;
+      color: $gray300;
+   }
+
+   .socials-bt {
+      color: $black;
+      margin-right: 25px;
+
+      &:last-child {
+         margin-right: 0;
+      }
+
+      img {
+         margin-right: 10px;
+         vertical-align: top;
+      }
+   }
+}
+
+.footer {
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+// для экранов <= 1024px
+@media screen and(max-width: 1024px) {
+
+   // область шириной 936 пикселей
+   .container {
+      width: 918px;
+      padding-left: 9px;
+      padding-right: 9px;
+   }
+
+   nav li {
+      margin-right: 30px;
+   }
+
+   .header p {
+      width: 442px;
+   }
+
+   .tour-card {
+      width: 450px - 100px;
+      margin-bottom: 18px;
+
+      &::before {
+         background-size: (450px, auto);
+         background-position: center;
+      }
+   }
+
+   .section__content {
+      margin-bottom: -18px;
+   }
+
+   // собери свой тур
+   .make-tour {
+      position: relative;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+   }
+
+   // стили формы в файле form.scss
+
+   // отзывы
+
+   .feedback-card {
+
+      height: 841px;
+      margin-right: 18px;
+      padding: 40px;
+      box-sizing: border-box;
+
+      &:last-child {
+         margin-right: 0;
+      }
+
+   }
+
+   // галерея
+
+   .gallery__content {
+      padding: 0 10px;
+   }
+
+   .gallery__card {
+      width: calc(25% - 20px);
+      margin: 0 10px 30px;
+      // background-size: content;
+      background-position: center;
+
+      &:nth-child(7n + 1),
+      &:nth-child(7n + 2),
+      &:nth-child(7n + 3) {
+         width: calc(33.33% - 20px);
+      }
+
+      &:nth-child(n + 11) {
+         display: none;
+      }
+   }
+
+   .story-card {
+      &::before {
+         background-size: cover;
+         background-position: right bottom;
+      }
+   }
+
+   .story-card__footer {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .socials {
+      align-self: center;
+
+      a {
+         margin-right: 35px;
+
+         &:last-child {
+            margin-right: 0;
+         }
+      }
+   }
+
+   .sta {
+      margin: 135px 0;
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .sta__img {
+         border-radius: 50px;
+      }
+
+      .section__content {
+         justify-content: center;
+      }
+
+      .sta-txt {
+         width: 370px;
+         margin-left: 30px;
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+      }
+
+      .note {
+         @include p-normal;
+         color: $gray300;
+         margin-top: 20px;
+      }
+   }
+
+   footer {
+      display: block;
+      width: 100%;
+      background-color: $beige200;
+      height: 88px;
+
+      .section__content {
+         height: 88px;
+         align-items: center;
+         justify-content: space-between;
+      }
+
+      p {
+         @include p-normal;
+         color: $gray300;
+      }
+
+      .socials-bt {
+         color: $black;
+         margin-right: 25px;
+
+         &:last-child {
+            margin-right: 0;
+         }
+
+         img {
+            margin-right: 10px;
+            vertical-align: top;
+         }
+      }
+   }
+
+   .footer {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+   }
+
+}
+
+// для экранов <= 360px
+@media screen and(max-width: 460px) {
+
+   // область шириной 318 пикселей
+.container {
+   width: 318px;
+   padding-left: 9px;
+   padding-right: 9px;
+}
+
+// хедер
+.header {
+   height: 488px;
+   background: $green400 url('/app/assets/img/header-img2.jpg') no-repeat left top;
+   background-size: cover;
+   background-position: center;
+
+   p {
+      @include m-p-normal;
+      color: white;
+      max-width: 310px;
+      margin: 40px 0;
+   }
+}
+
+nav {
+   width: 100%;
+   height: 88px;
+   @include m-p-normal;
+   color: white;
+   ul {
+      display: none
+   }
+   .logo img{
+      max-width: 133px;
+   }
+}
+
+.slogan {
+   @include m-H1;
+   color: white;
+   max-width: 250px;
+   margin-top: 52px;
+}
+
+
+.choose-tour {
+   width: 100%;
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+
+// выбор тура
+.section__head {
+   margin-top: 75px;
+   margin-bottom: 50px;
+
+   h2 {
+      @include m-H2;
+      margin-bottom: 30px;
+   }
+
+   p {
+      @include m-p-normal;
+      color: $gray300;
+      text-align: center;
+   }
+}
+.tab {
+   text-align: center;
+   li {
+      margin-bottom: 10px;
+      @include m-p-big;
+      margin-right: 10px;
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+
+   li.current {
+      color: $orange200;
+      border-color: $orange200 !important;
+      cursor: default !important;
+   }
+}
+
+.tour-card {
+   position: relative;
+   width: 318px - 50px;
+   height: 318px - 50px;
+   padding: 25px;
+   margin-bottom: 18px;
+   border-radius: 20px;
+
+   &::before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      // background: url(/app/assets/img/image_32.png) no-repeat;
+      background-color: $gray300;
+      background-image: inherit;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: all ease 300ms;
+   }
+
+   &::after {
+      content: "";
+      z-index: 2;
+      position: absolute;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
+   }
+
+   &:hover {
+      width: 370px - 80px;
+      height: 531px - 90px;
+      padding: 40px 40px 50px;
+      cursor: pointer;
+
+      &::before {
+         transform: scale(1.2);
+      }
+
+      .text-bt {
+         background-color: $green400;
+         margin-left: -10px;
+      }
+   }
+}
+
+.text-container {
+
+   h3 {
+      @include m-H3;
+      color: white;
+   }
+
+   p {
+      @include m-p-normal;
+      color: white;
+      margin-top: 37px;
+   }
+
+   p.price {
+      @include m-p-small;
+      color: white;
+      margin-top: 13px;
+   }
+
+   ul {
+      @include p-normal;
+      color: white;
+      list-style-type: disc;
+      margin-left: 32px;
+
+   }
+}
+
+.section__content {
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin-bottom: -30px;
+}
+
+.flex-column {
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.flex-row {
+   flex-direction: row;
+}
+
+// отзывы
+
+.feedback-card {
+   margin-right: 0;
+   padding: 20px;
+   border-radius: 20px;
+   height:auto;
+   margin-bottom: 18px;
+   &:last-child{
+      margin-bottom: 0;
+   }
+   
+   p:first-child {
+      @include m-p-big
+   }
+
+   .avatar {
+      position: absolute;
+      top: -16px;
+      right: 0px;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+   }
+   h3 {
+      @include m-H3;
+   }
+   .author__name {
+      margin-bottom: 8px;
+   }
+
+   .author {
+      margin-top: 56px;
+      note {
+         @include m-p-small
+      }
+   }
+}
+
+
+.gallery {
+   position: relative;
+   width: 100%;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   .container {
+   width: 336px;
+   }
+}
+
+
+.gallery__content {
+   margin-left:-9px;
+   padding-left:-9px;
+   margin-bottom: -18px;
+}
+
+.gallery__card {
+   background-image: inherit;
+   background-size: cover;
+   width: calc(33.3%-10px);
+   height: 110px;
+   border-radius: 20px;
+   margin: 0 5px 18px;
+   flex: 1 1 auto;
+
+   // box-shadow: 0 0 2px red;
+   &:nth-child(5n + 1),
+   &:nth-child(5n + 2)
+  {
+      width: calc(50% - 10px);
+   }
+   &:nth-child(8),
+   &:nth-child(9),
+   &:nth-child(10){
+      display: none;
+   }
+}
+
+//  истории путешествий
+.stories {
+   .text-container {
+      max-width: 263px;
+   }
+}
+
+.story-card {
+   width: 100%;
+   height: 455px;
+   border-radius: 20px;
+   padding: 30px;
+   margin-bottom: 20px;
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+
+   &::before {
+      border-radius: 20px;
+      background-size: cover;
+      background-position: bottom center ;
+   }
+
+   &::after {
+      border-radius: 20px;
+   }
+
+   h3 {
+      @include m-H3;
+      color: white;
+   }
+
+   p, ul{
+      @include m-p-normal;
+      color: white;
+   }
+   .socials{
+      display: none;
+   }
+}
+
+// СТА
+.sta{
+   margin: 105px 0 75px;
+
+   .sta__img {
+      border-radius: 20px;
+      width: 130px;
+      height: 130px;
+   }
+
+   .sta-txt {
+      text-align: center;
+      max-width: 291px;
+      margin-top: 30px;
+      margin-left: 0;
+
+      h3 {
+         @include m-H3;
+      }
+   }
+
+   .note {
+      @include m-p-normal;
+      color: $gray300;
+      margin-top: 20px;
+   }
+}
+
+// футер
+
+footer {
+   height: 95px;
+
+   .section__content {
+      width: 100%;
+      height: 95px - 42px;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      padding: 21px;
+    }
+
+   .flex-row{
+      flex-direction: column;
+      justify-content: space-around;
+   }
+
+   p {
+      @include m-p-normal;
+      color: $gray300;
+   }
+
+   .socials-bt {
+      color: $black;
+      margin-right: 10px;
+
+      &:last-child {
+         margin-right: 0;
+      }
+
+      img {
+         margin-right: 5px;
+         vertical-align: bottom;
+      }
+   }
+}
+
+.footer__socials{
+   margin-left: -15px;
+}
+
+}
