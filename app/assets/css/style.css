@@ -765,6 +765,9 @@ button {
 .tour-constructor .select option [data-selected] {
   color: #1B1F2B;
 }
+.tour-constructor .select [data-selected] {
+  color: #1B1F2B;
+}
 .tour-constructor textarea {
   font-family: inherit;
   font-size: inherit;
