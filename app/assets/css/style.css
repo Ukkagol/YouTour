@@ -508,7 +508,7 @@ button {
   overflow: hidden;
 }
 .text-bt::after {
-  content: url("/app/assets/img/arrow.svg");
+  content: url("../img/arrow.svg");
   position: absolute;
   right: 21px;
   top: 2px;
@@ -748,7 +748,7 @@ button {
   position: relative;
 }
 .tour-constructor .select::after {
-  content: url(/app/assets/img/dropdown.svg);
+  content: url(../img/dropdown.svg);
   pointer-events: none;
   position: absolute;
   top: 21px;
@@ -829,7 +829,7 @@ button {
   margin-right: 19px;
 }
 .tour-constructor .custom-check-btn::before {
-  content: url(/app/assets/img/check.svg);
+  content: url(../img/check.svg);
   display: inline-block;
   width: 12px;
   position: absolute;
@@ -1050,7 +1050,7 @@ body {
           justify-content: center;
   height: 831px;
   width: 100%;
-  background: #286562 url("/app/assets/img/header-img.jpg") no-repeat left top;
+  background: #286562 url("../img/header-img.jpg") no-repeat left top;
   background-size: cover;
 }
 .header p {
@@ -1799,7 +1799,7 @@ footer .socials-bt img {
 
   .header {
     height: 488px;
-    background: #286562 url("/app/assets/img/header-img2.jpg") no-repeat left top;
+    background: #286562 url("../img/header-img2.jpg") no-repeat left top;
     background-size: cover;
     background-position: center;
   }

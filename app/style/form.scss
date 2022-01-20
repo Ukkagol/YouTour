@@ -42,7 +42,7 @@
       position: relative;
 
    &::after {
-      content: url(/app/assets/img/dropdown.svg);
+      content: url(../img/dropdown.svg);
       pointer-events: none;
       position: absolute;
       top: 21px;
@@ -125,7 +125,7 @@ textarea{
       margin-right: 19px;
    
       &::before{
-         content: url(/app/assets/img/check.svg);
+         content: url(../img/check.svg);
          display: inline-block;
          width: 12px;
          
