@@ -40,6 +40,8 @@
 
    .select{
       position: relative;
+      select{
+      color: $gray300;}
 
    &::after {
       content: url(../img/dropdown.svg);
@@ -49,18 +51,42 @@
       right: 23px;
       z-index: 1;
   }
-}
-
-select{
-   @include p-normal;
-   color: $gray300;
-
-}
-select > option{
+  option{
    color: $black;
+   [data-selected] {
+      color: $black;
+   }
+  }
+
 }
+
+
+// select{
+//    @include p-normal;
+//    color: $gray300;
+
+// }
+
+// .default{
+//    @include p-normal;
+//    color: $gray300;
+//    }
+
+//    .act-dir{
+//       @include p-normal;
+//       color: $black;
+//    }
+
+
+// select > option{
+//    color: $black;
+// }
 
 textarea{
+   font-family: inherit;
+   font-size: inherit;
+   line-height: inherit;
+   color: inherit;
    width: 100%;
    height: 152px;
    resize: none;
@@ -214,15 +240,22 @@ textarea{
          box-sizing: border-box;
          padding: 10px;
    
-         &::placeholder {
-         @include m-p-normal;
-         color: $gray300;
-      }
+      //    &::placeholder {
+      //    @include m-p-normal;
+      //    color: $gray300;
+      // }
          &:hover{
             background-color: $beige200;
             cursor: pointer;
          }
 
+      }
+
+      input[type='text'], input[type='tel'], input[type='email']{
+         &::placeholder {
+            @include m-p-normal;
+            color: $gray300;
+         }
       }
    
       .select{
@@ -234,12 +267,23 @@ textarea{
      }
    }
    
-   select{
+   // select{
+   //    @include m-p-normal;
+   //    // color: $gray300;
+   
+   // }
+
+   .default{
       @include m-p-normal;
       color: $gray300;
+      }
    
-   }
-   select > option{
+      .act-dir{
+         @include m-p-normal;
+         color: $black;
+      }
+
+   option{
       color: $black;
    }
    

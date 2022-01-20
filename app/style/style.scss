@@ -168,9 +168,9 @@ nav {
    }
 
    &:hover {
-      width: 370px - 80px;
-      height: 531px - 90px;
-      padding: 40px 40px 50px;
+      // width: 370px - 80px;
+      // height: 531px - 90px;
+      // padding: 40px 40px 50px;
       cursor: pointer;
 
       &::before {
@@ -491,6 +491,19 @@ footer {
       img {
          margin-right: 10px;
          vertical-align: top;
+      }
+
+      &:hover{
+         border-bottom: 1px solid transparent;
+         span{
+            border-bottom: 1px solid $black;
+         }
+      }
+      &:active{
+         border-bottom: 1px solid transparent;
+         span{
+            border-bottom: 1px solid $orange200;
+         }
       }
    }
 }

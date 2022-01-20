@@ -171,14 +171,15 @@ button {
   color: white;
   white-space: nowrap;
   overflow: hidden;
+  border-bottom: 1px solid transparent;
 }
 .socials-bt:hover {
   cursor: pointer;
-  text-decoration: underline;
+  border-bottom: 1px solid white;
 }
 .socials-bt:active {
   color: #EFA501;
-  text-decoration: underline;
+  border-bottom: 1px solid #EFA501;
 }
 
 @media screen and (max-width: 360px) {
