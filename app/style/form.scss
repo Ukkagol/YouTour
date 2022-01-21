@@ -53,15 +53,17 @@
   }
   option{
    color: $black;
-   [data-selected] {
-      color: $black;
-   }
+   // [data-selected] {
+   //    color: $black;
+   // }
   }
-  [data-selected] {
-   color: $black;
+//   [data-selected] {
+//    color: $black;
+// }
 }
+.selected{
+   color: $black !important;
 }
-
 
 // select{
 //    @include p-normal;

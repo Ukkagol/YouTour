@@ -11,3 +11,22 @@ $(function(){
 		$("#to").mask("99.99.9999");
 
 	});
+	var droplist = document.getElementById("direction");
+	
+	droplist.onchange = function (){
+		console.log(droplist);
+	// var n = droplist.options.selectedIndex;
+		console.log(droplist.value);
+	if (droplist.value!='empty') {
+		droplist.classList.add('selected');
+	} else{
+		droplist.classList.remove('selected');
+	}
+};
+ 
+var clearButton = document.querySelector('button[type="reset"]');
+clearButton.addEventListener("click", function(){
+	droplist.classList.remove('selected');
+});
+
+

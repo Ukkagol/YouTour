@@ -61,6 +61,10 @@ nav {
          cursor: pointer;
       }
    }
+   .phone{
+      @include p-normal;
+      color: white;
+   outline: none;}
 }
 
 .slogan {
@@ -167,21 +171,6 @@ nav {
       background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
    }
 
-   &:hover {
-      // width: 370px - 80px;
-      // height: 531px - 90px;
-      // padding: 40px 40px 50px;
-      cursor: pointer;
-
-      &::before {
-         transform: scale(1.2);
-      }
-
-      .text-bt {
-         background-color: $green400;
-         margin-left: -10px;
-      }
-   }
 }
 
 .text-container {
@@ -395,18 +384,6 @@ nav {
       background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%);
    }
 
-   &:hover {
-      cursor: pointer;
-
-      &::before {
-         transform: scale(1.2);
-      }
-
-      .text-bt {
-         background-color: $green400;
-         margin-left: -10px;
-      }
-   }
 }
 
 .story-card__footer {
@@ -1075,4 +1052,38 @@ footer {
    margin-left: -15px;
 }
 
+}
+.blue{
+   background-color: blue;
+}
+
+// ховеры только для десктопов
+@media screen and(min-width: 1025px){
+
+.tour-card:hover {
+
+   cursor: pointer;
+
+   &::before {
+      transform: scale(1.2);
+   }
+
+   .text-bt {
+      background-color: $green400;
+      // margin-left: -10px;
+   }
+}
+
+.story-card:hover {
+   cursor: pointer;
+
+   &::before {
+      transform: scale(1.2);
+   }
+
+   .text-bt {
+      background-color: $green400;
+      // margin-left: -10px;
+   }
+}
 }

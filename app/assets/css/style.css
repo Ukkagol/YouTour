@@ -478,15 +478,6 @@ button {
   white-space: nowrap;
   overflow: hidden;
 }
-.small-bt:hover {
-  background-color: #EFA501;
-  color: white;
-  cursor: pointer;
-}
-.small-bt:active {
-  background-color: #F8E6BE;
-  color: #1B1F2B;
-}
 
 .text-bt {
   position: relative;
@@ -498,7 +489,7 @@ button {
   color: #1B1F2B;
   width: 179px;
   height: 42px;
-  background-color: #1B1F2B transparent;
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 50px;
   padding-left: 20px;
   margin-left: -20px;
@@ -513,13 +504,6 @@ button {
   right: 21px;
   top: 2px;
   margin-left: 16px;
-}
-.text-bt:hover {
-  background-color: #286562;
-  cursor: pointer;
-}
-.text-bt:active {
-  background-color: #EFA501;
 }
 
 .big-bt_dark {
@@ -539,13 +523,6 @@ button {
   white-space: nowrap;
   overflow: hidden;
 }
-.big-bt_dark:hover {
-  background-color: #3B7E7B;
-  cursor: pointer;
-}
-.big-bt_dark:active {
-  background-color: #627F7E;
-}
 
 .big-bt_light {
   display: inline-block;
@@ -564,13 +541,6 @@ button {
   white-space: nowrap;
   overflow: hidden;
 }
-.big-bt_light:hover {
-  background-color: #F1F3F2;
-  cursor: pointer;
-}
-.big-bt_light:active {
-  background-color: #D9DFDB;
-}
 
 .socials-bt {
   position: relative;
@@ -587,15 +557,51 @@ button {
   overflow: hidden;
   border-bottom: 1px solid transparent;
 }
-.socials-bt:hover {
-  cursor: pointer;
-  border-bottom: 1px solid white;
-}
-.socials-bt:active {
-  color: #EFA501;
-  border-bottom: 1px solid #EFA501;
-}
 
+@media screen and (min-width: 1025px) {
+  .small-bt:hover {
+    background-color: #EFA501;
+    color: white;
+    cursor: pointer;
+  }
+  .small-bt:active {
+    background-color: #F8E6BE;
+    color: #1B1F2B;
+  }
+
+  .text-bt:hover {
+    background-color: #286562;
+    cursor: pointer;
+  }
+  .text-bt:active {
+    background-color: #EFA501;
+  }
+
+  .big-bt_dark:hover {
+    background-color: #3B7E7B;
+    cursor: pointer;
+  }
+  .big-bt_dark:active {
+    background-color: #627F7E;
+  }
+
+  .big-bt_light:hover {
+    background-color: #F1F3F2;
+    cursor: pointer;
+  }
+  .big-bt_light:active {
+    background-color: #D9DFDB;
+  }
+
+  .socials-bt:hover {
+    cursor: pointer;
+    border-bottom: 1px solid white;
+  }
+  .socials-bt:active {
+    color: #EFA501;
+    border-bottom: 1px solid #EFA501;
+  }
+}
 @media screen and (max-width: 360px) {
   .small-bt {
     font-style: normal;
@@ -762,11 +768,8 @@ button {
 .tour-constructor .select option {
   color: #1B1F2B;
 }
-.tour-constructor .select option [data-selected] {
-  color: #1B1F2B;
-}
-.tour-constructor .select [data-selected] {
-  color: #1B1F2B;
+.tour-constructor .selected {
+  color: #1B1F2B !important;
 }
 .tour-constructor textarea {
   font-family: inherit;
@@ -1114,6 +1117,15 @@ nav li:hover {
   border-color: white;
   cursor: pointer;
 }
+nav .phone {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 142%;
+  color: #1B1F2B;
+  color: white;
+  outline: none;
+}
 
 .slogan {
   color: white;
@@ -1231,17 +1243,6 @@ nav li:hover {
   height: 100%;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), color-stop(48.44%, rgba(0, 0, 0, 0.06)), to(rgba(0, 0, 0, 0.5)));
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
-}
-.tour-card:hover {
-  cursor: pointer;
-}
-.tour-card:hover::before {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.tour-card:hover .text-bt {
-  background-color: #286562;
-  margin-left: -10px;
 }
 
 .text-container h3 {
@@ -1496,17 +1497,6 @@ nav li:hover {
   height: 100%;
   background: -webkit-gradient(linear, right top, left top, color-stop(0.01%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2)));
   background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%);
-}
-.story-card:hover {
-  cursor: pointer;
-}
-.story-card:hover::before {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.story-card:hover .text-bt {
-  background-color: #286562;
-  margin-left: -10px;
 }
 
 .story-card__footer {
@@ -2252,5 +2242,32 @@ footer .socials-bt:active span {
 
   .footer__socials {
     margin-left: -15px;
+  }
+}
+.blue {
+  background-color: blue;
+}
+
+@media screen and (min-width: 1025px) {
+  .tour-card:hover {
+    cursor: pointer;
+  }
+  .tour-card:hover::before {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .tour-card:hover .text-bt {
+    background-color: #286562;
+  }
+
+  .story-card:hover {
+    cursor: pointer;
+  }
+  .story-card:hover::before {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .story-card:hover .text-bt {
+    background-color: #286562;
   }
 }/*# sourceMappingURL=style.css.map */

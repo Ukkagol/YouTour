@@ -64,15 +64,6 @@ button {
   white-space: nowrap;
   overflow: hidden;
 }
-.small-bt:hover {
-  background-color: #EFA501;
-  color: white;
-  cursor: pointer;
-}
-.small-bt:active {
-  background-color: #F8E6BE;
-  color: #1B1F2B;
-}
 
 .text-bt {
   position: relative;
@@ -84,7 +75,7 @@ button {
   color: #1B1F2B;
   width: 179px;
   height: 42px;
-  background-color: #1B1F2B transparent;
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 50px;
   padding-left: 20px;
   margin-left: -20px;
@@ -99,13 +90,6 @@ button {
   right: 21px;
   top: 2px;
   margin-left: 16px;
-}
-.text-bt:hover {
-  background-color: #286562;
-  cursor: pointer;
-}
-.text-bt:active {
-  background-color: #EFA501;
 }
 
 .big-bt_dark {
@@ -125,13 +109,6 @@ button {
   white-space: nowrap;
   overflow: hidden;
 }
-.big-bt_dark:hover {
-  background-color: #3B7E7B;
-  cursor: pointer;
-}
-.big-bt_dark:active {
-  background-color: #627F7E;
-}
 
 .big-bt_light {
   display: inline-block;
@@ -150,13 +127,6 @@ button {
   white-space: nowrap;
   overflow: hidden;
 }
-.big-bt_light:hover {
-  background-color: #F1F3F2;
-  cursor: pointer;
-}
-.big-bt_light:active {
-  background-color: #D9DFDB;
-}
 
 .socials-bt {
   position: relative;
@@ -173,15 +143,51 @@ button {
   overflow: hidden;
   border-bottom: 1px solid transparent;
 }
-.socials-bt:hover {
-  cursor: pointer;
-  border-bottom: 1px solid white;
-}
-.socials-bt:active {
-  color: #EFA501;
-  border-bottom: 1px solid #EFA501;
-}
 
+@media screen and (min-width: 1025px) {
+  .small-bt:hover {
+    background-color: #EFA501;
+    color: white;
+    cursor: pointer;
+  }
+  .small-bt:active {
+    background-color: #F8E6BE;
+    color: #1B1F2B;
+  }
+
+  .text-bt:hover {
+    background-color: #286562;
+    cursor: pointer;
+  }
+  .text-bt:active {
+    background-color: #EFA501;
+  }
+
+  .big-bt_dark:hover {
+    background-color: #3B7E7B;
+    cursor: pointer;
+  }
+  .big-bt_dark:active {
+    background-color: #627F7E;
+  }
+
+  .big-bt_light:hover {
+    background-color: #F1F3F2;
+    cursor: pointer;
+  }
+  .big-bt_light:active {
+    background-color: #D9DFDB;
+  }
+
+  .socials-bt:hover {
+    cursor: pointer;
+    border-bottom: 1px solid white;
+  }
+  .socials-bt:active {
+    color: #EFA501;
+    border-bottom: 1px solid #EFA501;
+  }
+}
 @media screen and (max-width: 360px) {
   .small-bt {
     font-style: normal;
