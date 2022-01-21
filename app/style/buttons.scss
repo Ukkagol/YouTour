@@ -146,7 +146,7 @@ button {
 }
 
 // для экранов <= 360px
-@media screen and(max-width: 360px) {
+@media screen and(max-width: 460px) {
    .small-bt {
       @include m-p-small;
       width: 114px;

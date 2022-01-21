@@ -602,7 +602,7 @@ button {
     border-bottom: 1px solid #EFA501;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 460px) {
   .small-bt {
     font-style: normal;
     font-weight: normal;
@@ -1624,7 +1624,7 @@ footer .socials-bt:active span {
           justify-content: center;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1158px) {
   .container {
     width: 918px;
     padding-left: 9px;
@@ -1951,20 +1951,6 @@ footer .socials-bt:active span {
     height: 100%;
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), color-stop(48.44%, rgba(0, 0, 0, 0.06)), to(rgba(0, 0, 0, 0.5)));
     background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
-  }
-  .tour-card:hover {
-    width: 290px;
-    height: 441px;
-    padding: 40px 40px 50px;
-    cursor: pointer;
-  }
-  .tour-card:hover::before {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  .tour-card:hover .text-bt {
-    background-color: #286562;
-    margin-left: -10px;
   }
 
   .text-container h3 {
