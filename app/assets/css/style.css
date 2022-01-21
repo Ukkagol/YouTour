@@ -1624,6 +1624,29 @@ footer .socials-bt:active span {
           justify-content: center;
 }
 
+@media screen and (min-width: 1025px) {
+  .tour-card:hover {
+    cursor: pointer;
+  }
+  .tour-card:hover::before {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .tour-card:hover .text-bt {
+    background-color: #286562;
+  }
+
+  .story-card:hover {
+    cursor: pointer;
+  }
+  .story-card:hover::before {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .story-card:hover .text-bt {
+    background-color: #286562;
+  }
+}
 @media screen and (max-width: 1158px) {
   .container {
     width: 918px;
@@ -2228,32 +2251,5 @@ footer .socials-bt:active span {
 
   .footer__socials {
     margin-left: -15px;
-  }
-}
-.blue {
-  background-color: blue;
-}
-
-@media screen and (min-width: 1025px) {
-  .tour-card:hover {
-    cursor: pointer;
-  }
-  .tour-card:hover::before {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  .tour-card:hover .text-bt {
-    background-color: #286562;
-  }
-
-  .story-card:hover {
-    cursor: pointer;
-  }
-  .story-card:hover::before {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  .story-card:hover .text-bt {
-    background-color: #286562;
   }
 }/*# sourceMappingURL=style.css.map */

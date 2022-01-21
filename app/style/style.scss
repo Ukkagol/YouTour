@@ -492,6 +492,37 @@ footer {
    justify-content: center;
 }
 
+// ховеры только для десктопов
+@media screen and(min-width: 1025px){
+
+   .tour-card:hover {
+   
+      cursor: pointer;
+   
+      &::before {
+         transform: scale(1.2);
+      }
+   
+      .text-bt {
+         background-color: $green400;
+         // margin-left: -10px;
+      }
+   }
+   
+   .story-card:hover {
+      cursor: pointer;
+   
+      &::before {
+         transform: scale(1.2);
+      }
+   
+      .text-bt {
+         background-color: $green400;
+         // margin-left: -10px;
+      }
+   }
+   }
+
 // для экранов <= 1024px
 @media screen and(max-width: 1158px) {
 
@@ -1037,37 +1068,4 @@ footer {
 }
 
 }
-.blue{
-   background-color: blue;
-}
 
-// ховеры только для десктопов
-@media screen and(min-width: 1025px){
-
-.tour-card:hover {
-
-   cursor: pointer;
-
-   &::before {
-      transform: scale(1.2);
-   }
-
-   .text-bt {
-      background-color: $green400;
-      // margin-left: -10px;
-   }
-}
-
-.story-card:hover {
-   cursor: pointer;
-
-   &::before {
-      transform: scale(1.2);
-   }
-
-   .text-bt {
-      background-color: $green400;
-      // margin-left: -10px;
-   }
-}
-}
