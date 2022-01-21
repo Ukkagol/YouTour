@@ -301,6 +301,7 @@ nav {
 .gallery__card {
    background-image: inherit;
    background-size: cover;
+   background-position: center;
    width: calc(20% - 30px);
    height: 300px;
    border-radius: 50px;
@@ -590,7 +591,7 @@ footer {
    .gallery__card {
       width: calc(25% - 20px);
       margin: 0 10px 30px;
-      // background-size: content;
+      background-size: cover;
       background-position: center;
 
       &:nth-child(7n + 1),
