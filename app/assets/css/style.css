@@ -761,7 +761,7 @@ button {
   content: url(../img/dropdown.svg);
   pointer-events: none;
   position: absolute;
-  top: 21px;
+  top: 22px;
   right: 23px;
   z-index: 1;
 }
@@ -1125,6 +1125,11 @@ nav .phone {
   color: #1B1F2B;
   color: white;
   outline: none;
+  border-bottom: 1px solid transparent;
+}
+nav .phone:hover {
+  border-color: white;
+  cursor: pointer;
 }
 
 .slogan {
